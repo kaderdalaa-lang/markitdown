@@ -1,0 +1,41 @@
+/* ASCteam design tokens. Generated from tokens.json. Edit tokens.json, then regenerate.
+   Values are a neutral placeholder, not measured from SportEasy (no screenshots taken).
+   replica-brand replaces the values, never the names. */
+
+:root {
+  --token-color-bg: #ffffff;
+  --token-color-surface: #f6f7f9;
+  --token-color-border: #e3e6ea;
+  --token-color-border-input: #868e98;
+  --token-color-text: #14171c;
+  --token-color-text-muted: #5b6470;
+  --token-color-accent: #2f5bea;
+  --token-color-on-accent: #ffffff;
+  --token-color-danger: #c62f2f;
+  --token-color-success: #1f7a4d;
+
+  --token-font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --token-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --token-radius-sm: 6px;
+  --token-radius-md: 10px;
+  --token-radius-lg: 16px;
+  --token-radius-pill: 999px;
+
+  --token-shadow-card: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.1);
+  --token-shadow-pop: 0 12px 32px rgba(16, 24, 40, 0.16);
+
+  --token-motion-fast: 120ms;
+  --token-motion-base: 200ms;
+  --token-motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --token-focus-ring: 0 0 0 2px var(--token-color-bg), 0 0 0 4px var(--token-color-accent);
+}
+
+/* Dark mode: not in v1. Add a second :root block when the palette is ready and rerun contrast.py. */
+
+body {
+  background: var(--token-color-bg);
+  color: var(--token-color-text);
+  font-family: var(--token-font-sans);
+}

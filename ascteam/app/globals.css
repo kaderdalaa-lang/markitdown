@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Map design tokens to Tailwind utilities: bg-surface, text-muted, border-border ... */
+@theme inline {
+  --color-bg: var(--token-color-bg);
+  --color-surface: var(--token-color-surface);
+  --color-border: var(--token-color-border);
+  --color-border-input: var(--token-color-border-input);
+  --color-text: var(--token-color-text);
+  --color-text-muted: var(--token-color-text-muted);
+  --color-accent: var(--token-color-accent);
+  --color-on-accent: var(--token-color-on-accent);
+  --color-danger: var(--token-color-danger);
+  --color-success: var(--token-color-success);
+  --font-sans: var(--token-font-sans);
+  --radius-sm: var(--token-radius-sm);
+  --radius-md: var(--token-radius-md);
+  --radius-lg: var(--token-radius-lg);
+  --shadow-card: var(--token-shadow-card);
+  --shadow-pop: var(--token-shadow-pop);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--token-focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}

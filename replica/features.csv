@@ -1,18 +1,18 @@
 feature,area,priority,original,clone,notes
-Sign up a club with a 30-day free trial,onboarding,must,yes,no,source: plans page
+Sign up a club with a 30-day free trial,onboarding,must,yes,no,"not built, needs auth"
 Create teams and groups inside a club,organization,must,yes,no,multi-team management
-Member database with roles (manager coach player parent volunteer),members,must,yes,no,S03 and S11
+Member database with roles (manager coach player parent volunteer),members,must,yes,partial,"list and search, roles shown, no profile page"
 Import members and edit profiles,members,must,yes,no,import flow not read
 Per-field privacy on member profiles,members,should,yes,no,source 3
 Attach files to member profile,members,should,yes,no,health certificate and similar
-Shared club calendar across teams,calendar,must,yes,no,S07 day week month season
-Filter calendar by team and event type,calendar,must,yes,no,source 8
-Create training match meeting and club-wide events,events,must,yes,no,S09
-Event invitations with yes no maybe answers,attendance,must,yes,no,F02
-Automatic reminders for events,notifications,must,yes,no,plans page
-Attendance record per event and season review,attendance,must,yes,no,plans page; history kept by import
-Event chat thread per event,messaging,must,yes,no,source 7
-Team and group messaging with recipient picker,messaging,must,yes,no,S10
+Shared club calendar across teams,calendar,must,yes,partial,"list view by day, not the grid"
+Filter calendar by team and event type,calendar,must,yes,partial,"filter by team only, no event type filter yet"
+Create training match meeting and club-wide events,events,must,yes,yes,"S09 form, team or club-wide"
+Event invitations with yes no maybe answers,attendance,must,yes,yes,"invite on create, RSVP on S08; fake data layer"
+Automatic reminders for events,notifications,must,yes,no,"not built, needs jobs"
+Attendance record per event and season review,attendance,must,yes,partial,"per-event attendance only, no season review"
+Event chat thread per event,messaging,must,yes,no,not built
+Team and group messaging with recipient picker,messaging,must,yes,no,not built
 Share photos videos and PDFs in messages,messaging,should,yes,no,source 7
 Delete a message,messaging,should,yes,no,source 7
 Membership fee products with validity period,payments,skip,yes,skip,free app: no payments
@@ -30,5 +30,5 @@ Live statistics feed,stats,skip,yes,skip,needs partner sports data feed, not pub
 Ad-free view for paid tier,billing,skip,yes,skip,free app: no payments
 Native iOS and Android apps,platform,could,yes,no,start as web, native later
 Export member list to spreadsheet,members,should,yes,no,S03 export
-Import member roster from SportEasy export file,members,must,yes,no,"user's own club, user supplies export file"
-Import historical season statistics per player,stats,must,yes,no,user request: keep history; only from user's own export
+Import member roster from SportEasy export file,members,must,yes,no,"not built; blank CSV template planned, no export file"
+Import historical season statistics per player,stats,must,yes,no,not built
