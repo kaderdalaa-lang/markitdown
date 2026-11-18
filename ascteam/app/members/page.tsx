@@ -1,4 +1,4 @@
-import { listMembers, listTeams } from "@/lib/data";
+import { listMembers, listTeams } from "@/lib/repo";
 import { Card, EmptyState, Field, PageTitle, inputClass, Button } from "../components/ui";
 
 export const metadata = { title: "Membres" };

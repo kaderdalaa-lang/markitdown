@@ -1,7 +1,7 @@
 feature,area,priority,original,clone,notes
-Sign up a club with a 30-day free trial,onboarding,must,yes,no,"not built, needs auth"
+Sign up a club with a 30-day free trial,onboarding,must,yes,partial,"email and password sign up built, club creation and trial not built"
 Create teams and groups inside a club,organization,must,yes,no,multi-team management
-Member database with roles (manager coach player parent volunteer),members,must,yes,partial,"list and search, roles shown, no profile page"
+Member database with roles (manager coach player parent volunteer),members,must,yes,partial,"list and search via name-only directory; personal fields admin-only, no admin UI yet"
 Import members and edit profiles,members,must,yes,no,import flow not read
 Per-field privacy on member profiles,members,should,yes,no,source 3
 Attach files to member profile,members,should,yes,no,health certificate and similar
@@ -9,7 +9,7 @@ Shared club calendar across teams,calendar,must,yes,partial,"list view by day, n
 Filter calendar by team and event type,calendar,must,yes,partial,"filter by team only, no event type filter yet"
 Create training match meeting and club-wide events,events,must,yes,yes,"S09 form, team or club-wide"
 Event invitations with yes no maybe answers,attendance,must,yes,yes,"invite on create, RSVP on S08; fake data layer"
-Automatic reminders for events,notifications,must,yes,no,"not built, needs jobs"
+Automatic reminders for events,notifications,must,yes,partial,"queue and job route built, pg_cron not scheduled, Resend not configured"
 Attendance record per event and season review,attendance,must,yes,partial,"per-event attendance only, no season review"
 Event chat thread per event,messaging,must,yes,no,not built
 Team and group messaging with recipient picker,messaging,must,yes,no,not built

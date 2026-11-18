@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { CURRENT_MEMBER_ID, getEvent, getMyAnswer, listAttendance, listTeams } from "@/lib/data";
+import { currentMemberId, getEvent, getMyAnswer, listAttendance, listTeams } from "@/lib/repo";
 import { ANSWER_LABEL, KIND_LABEL, formatDay, formatTime } from "@/lib/format";
 import { Card, EmptyState, PageTitle } from "../../components/ui";
 import { RsvpControl } from "../../components/RsvpControl";
@@ -9,9 +9,10 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
   const event = await getEvent(id);
   if (!event) notFound();
 
+  const me = await currentMemberId();
   const [attendance, myAnswer, teams] = await Promise.all([
     listAttendance(id),
-    getMyAnswer(id, CURRENT_MEMBER_ID),
+    me ? getMyAnswer(id, me) : Promise.resolve("none" as const),
     listTeams(),
   ]);
   const team = teams.find((t) => t.id === event.teamId);

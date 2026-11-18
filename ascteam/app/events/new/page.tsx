@@ -1,5 +1,5 @@
 import { createEventAction } from "../../actions";
-import { listTeams } from "@/lib/data";
+import { listTeams } from "@/lib/repo";
 import { KIND_LABEL } from "@/lib/format";
 import { Button, Card, Field, PageTitle, inputClass } from "../../components/ui";
 

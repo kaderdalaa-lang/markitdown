@@ -1,4 +1,5 @@
 import Link from "next/link";
+const AUTH_ON = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL);
 import type { ReactNode } from "react";
 
 const NAV = [
@@ -21,6 +22,13 @@ export function AppShell({ children }: { children: ReactNode }) {
                 {n.label}
               </Link>
             ))}
+            {AUTH_ON && (
+            <form method="post" action="/logout">
+              <button type="submit" className="rounded-md px-3 py-1.5 text-sm text-text-muted hover:bg-surface hover:text-text">
+                Se déconnecter
+              </button>
+            </form>
+            )}
           </nav>
         </div>
       </header>

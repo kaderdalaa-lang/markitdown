@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { createEvent, CURRENT_MEMBER_ID, setAnswer } from "@/lib/data";
+import { createEvent, currentMemberId, setAnswer } from "@/lib/repo";
 import type { Answer, EventKind } from "@/lib/types";
 
 const KINDS: EventKind[] = ["training", "match", "meeting", "party", "other"];
@@ -40,7 +40,9 @@ export async function answerAction(formData: FormData) {
   const eventId = String(formData.get("eventId"));
   const answer = String(formData.get("answer")) as Answer;
   if (!ANSWERS.includes(answer)) return;
-  await setAnswer(eventId, CURRENT_MEMBER_ID, answer);
+  const me = await currentMemberId();
+  if (!me) redirect("/login");
+  await setAnswer(eventId, me, answer);
   revalidatePath(`/events/${eventId}`);
   revalidatePath("/calendar");
 }

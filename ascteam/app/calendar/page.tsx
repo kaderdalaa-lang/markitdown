@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { listEvents, listTeams } from "@/lib/data";
+import { listEvents, listTeams } from "@/lib/repo";
 import { KIND_LABEL, dayKey, formatDay, formatTime } from "@/lib/format";
 import { Card, Chip, EmptyState, LinkButton, PageTitle } from "../components/ui";
 
