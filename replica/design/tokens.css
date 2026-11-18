@@ -1,0 +1,41 @@
+/* ASCteam design tokens. Generated from tokens.json. Edit tokens.json, then regenerate.
+   Values are a neutral placeholder, not measured from SportEasy (no screenshots taken).
+   replica-brand replaces the values, never the names. */
+
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f6f7f9;
+  --color-border: #e3e6ea;
+  --color-border-input: #868e98;
+  --color-text: #14171c;
+  --color-text-muted: #5b6470;
+  --color-accent: #2f5bea;
+  --color-on-accent: #ffffff;
+  --color-danger: #c62f2f;
+  --color-success: #1f7a4d;
+
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.1);
+  --shadow-pop: 0 12px 32px rgba(16, 24, 40, 0.16);
+
+  --motion-fast: 120ms;
+  --motion-base: 200ms;
+  --motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* Dark mode: not in v1. Add a second :root block when the palette is ready and rerun contrast.py. */
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
