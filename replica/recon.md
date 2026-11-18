@@ -188,11 +188,11 @@ Relationships: Club 1-n Team, Club 1-n Member, Member n-n Team (via TeamMembersh
 
 ## Feature matrix
 
-See `features.csv`. Must: 16, should: 8, could: 6, skip: 1 (31 rows).
+See `features.csv`. Must: 14, should: 6, could: 4, skip: 9 (33 rows). Import of roster and season history added at user request.
 
 ## Out of scope (cannot or should not be cloned)
 
-- Stripe as payment rails: use Stripe directly (allowed as an integration), do not copy SportEasy's account or merchant setup
+- Payments of any kind (Stripe, fee collection, coupons, instalments): skipped, the clone is free (decision 2026-11-18)
 - Sponsor ad network and the 150 000 reviews, member counts, club logos and testimonials: their content, not the product
 - Club logos, photos and marketing copy on the home page: not ours
 - Live sports data feed and player stat provider: partner data, not public

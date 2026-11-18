@@ -10,23 +10,25 @@ Filter calendar by team and event type,calendar,must,yes,no,source 8
 Create training match meeting and club-wide events,events,must,yes,no,S09
 Event invitations with yes no maybe answers,attendance,must,yes,no,F02
 Automatic reminders for events,notifications,must,yes,no,plans page
-Attendance record per event and season review,attendance,must,yes,no,plans page
+Attendance record per event and season review,attendance,must,yes,no,plans page; history kept by import
 Event chat thread per event,messaging,must,yes,no,source 7
 Team and group messaging with recipient picker,messaging,must,yes,no,S10
 Share photos videos and PDFs in messages,messaging,should,yes,no,source 7
 Delete a message,messaging,should,yes,no,source 7
-Membership fee products with validity period,payments,must,yes,no,S04
-Fee rates by age group,payments,must,yes,no,S04
-Online payment via Stripe,payments,must,yes,no,Stripe as rails only
-Offline payment entry (cheque cash),payments,must,yes,no,treasurer flow
-Coupons on fee products,payments,should,yes,no,S04
-Add-on options at checkout (e.g. jersey),payments,should,yes,no,S04
-Registration form for new members with payment,payments,should,yes,no,F07
-Payment instalments and VAT settings,payments,could,yes,no,treasurer flow
+Membership fee products with validity period,payments,skip,yes,skip,free app: no payments
+Fee rates by age group,payments,skip,yes,skip,free app: no payments
+Online payment via Stripe,payments,skip,yes,skip,free app: no payments
+Offline payment entry (cheque cash),payments,skip,yes,skip,free app: no payments
+Coupons on fee products,payments,skip,yes,skip,free app: no payments
+Add-on options at checkout (e.g. jersey),payments,skip,yes,skip,free app: no payments
+Registration form for new members (no payment),payments,should,yes,no,no payment step
+Payment instalments and VAT settings,payments,skip,yes,skip,free app: no payments
 Team statistics and player statistics,stats,could,yes,no,plans page, gated to paid tier in some views
 Votes and ratings after each game,team spirit,could,yes,no,plans page
 Sponsor banners with campaign results,sponsorship,could,yes,no,plans page
 Live statistics feed,stats,skip,yes,skip,needs partner sports data feed, not public
-Ad-free view for paid tier,billing,could,yes,no,plans page
+Ad-free view for paid tier,billing,skip,yes,skip,free app: no payments
 Native iOS and Android apps,platform,could,yes,no,start as web, native later
 Export member list to spreadsheet,members,should,yes,no,S03 export
+Import member roster from SportEasy export file,members,must,yes,no,"user's own club, user supplies export file"
+Import historical season statistics per player,stats,must,yes,no,user request: keep history; only from user's own export
